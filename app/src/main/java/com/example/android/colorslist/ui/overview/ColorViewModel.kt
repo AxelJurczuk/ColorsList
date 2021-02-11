@@ -16,9 +16,9 @@ class ColorViewModel: ViewModel (){
     }
 
     private fun getColorList(){
-        val list = colorDataSet.getColorList()
-        listLiveData.value = list
+        listLiveData.value = colorDataSet.getColorList()
     }
+
     fun getLiveDataList():LiveData<List<Color>>{
         return listLiveData
     }
