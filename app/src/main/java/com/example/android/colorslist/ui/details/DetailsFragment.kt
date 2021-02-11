@@ -25,12 +25,7 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val args = args.color
-        when (args.colorRes){
-            1->binding.tvColor.setBackgroundResource(R.color.yellow)
-            2->binding.tvColor.setBackgroundResource(R.color.red)
-            3->binding.tvColor.setBackgroundResource(R.color.blue)
-            else->binding.tvColor.setBackgroundResource(R.color.black)
-        }
+        binding.tvColor.setBackgroundResource(args.colorRes)
     }
 
     override fun onDestroyView() {

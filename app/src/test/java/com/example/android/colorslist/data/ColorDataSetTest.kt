@@ -1,6 +1,7 @@
 package com.example.android.colorslist.data
 
 
+import com.example.android.colorslist.R
 import org.junit.Test
 import com.google.common.truth.Truth.assertThat
 
@@ -8,24 +9,24 @@ import com.google.common.truth.Truth.assertThat
 class ColorDataSetTest {
     private val colorDataSet = ColorDataSet()
     @Test
-    fun `color is 1`(){
+    fun `index is divisible by 3 and 5 without reminder return yellow`(){
         val color = colorDataSet.getColor(15)
-        assertThat(color).isEqualTo(1)
+        assertThat(color).isEqualTo(R.color.yellow)
     }
     @Test
-    fun `color is 2`(){
+    fun `index is divisible by 3 without reminder return yellow`(){
         val color = colorDataSet.getColor(9)
-        assertThat(color).isEqualTo(2)
+        assertThat(color).isEqualTo(R.color.red)
     }
     @Test
-    fun `color is 3`(){
+    fun `index is divisible by 5 without reminder return blue`(){
         val color = colorDataSet.getColor(20)
-        assertThat(color).isEqualTo(3)
+        assertThat(color).isEqualTo(R.color.blue)
     }
     @Test
-    fun `color is 0`(){
+    fun `index is divisible by 3 and or 5 with reminder return black`(){
         val color = colorDataSet.getColor(17)
-        assertThat(color).isEqualTo(0)
+        assertThat(color).isEqualTo(R.color.black)
     }
 
 }

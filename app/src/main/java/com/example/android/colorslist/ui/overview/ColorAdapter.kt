@@ -27,13 +27,13 @@ class ColorAdapter(private val context: Context, private val listener:OnItemClic
         val item = colorList[position]
 
         when (item.colorRes) {
-            1 -> {
+            R.color.yellow -> {
                 holder.textColor.setBackgroundResource(R.color.yellow)
             }
-            2 -> {
+            R.color.red-> {
                 holder.textColor.setBackgroundResource(R.color.red)
             }
-            3 -> {
+            R.color.blue-> {
                 holder.textColor.setBackgroundResource(R.color.blue)
             }
             else -> {
