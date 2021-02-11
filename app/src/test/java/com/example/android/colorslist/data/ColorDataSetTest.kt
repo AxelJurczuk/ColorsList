@@ -24,7 +24,7 @@ class ColorDataSetTest {
         assertThat(color).isEqualTo(R.color.blue)
     }
     @Test
-    fun `index is divisible by 3 and or 5 with reminder return black`(){
+    fun `index is not divisible by 3 and or 5 without reminder return black`(){
         val color = colorDataSet.getColor(17)
         assertThat(color).isEqualTo(R.color.black)
     }
